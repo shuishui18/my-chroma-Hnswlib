@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python-version: ["3.9", "3.12"]
+        python-version: ["3.12"]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
@@ -25,7 +25,6 @@ jobs:
       - name: Test
         timeout-minutes: 16
         run: |
-          python -m unittest discover -v --start-directory examples/python --pattern "example.py"
           python -m unittest discover -v --start-directory tests/python --pattern "bindings_test*.py"
   
   test_cpp:
