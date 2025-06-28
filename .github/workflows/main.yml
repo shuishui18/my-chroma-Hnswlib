@@ -28,13 +28,13 @@ jobs:
         env:
           CIBW_ENVIRONMENT: HNSWLIB_NO_NATIVE=true
           CIBW_ENVIRONMENT_PASS_LINUX: HNSWLIB_NO_NATIVE
-          CIBW_PROJECT_REQUIRES_PYTHON: ">=3.7"
-          CIBW_SKIP: "pp* *musllinux* cp312-win*"
+          CIBW_PROJECT_REQUIRES_PYTHON: ">=3.10"
+          CIBW_SKIP: "pp* *musllinux*"
           CIBW_ARCHS_MACOS: "x86_64 arm64"
           CIBW_ARCHS_WINDOWS: "AMD64"
           CIBW_ARCHS_LINUX: "x86_64 aarch64"
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: python-package-distributions-${{ matrix.runs-on }}
+          name: python-package-distributions
           path: dist
