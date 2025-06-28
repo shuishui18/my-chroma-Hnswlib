@@ -1,5 +1,5 @@
-# Chroma-Hnswlib - fast approximate nearest neighbor search
-Chromas fork of https://github.com/nmslib/hnswlib
+fork of https://github.com/chroma-core/hnswlib
+Only used for building chroma_hnswlib-0.7.6-cp312-cp312-win_amd64.whl
 
 ## Build & Release
 
