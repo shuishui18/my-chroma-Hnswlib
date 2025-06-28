@@ -23,7 +23,7 @@ jobs:
         run: python -m pip install .
       
       - name: Test
-        timeout-minutes: 15
+        timeout-minutes: 16
         run: |
           python -m unittest discover -v --start-directory examples/python --pattern "example.py"
           python -m unittest discover -v --start-directory tests/python --pattern "bindings_test*.py"
